@@ -14,37 +14,22 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="btn-dropdown">
-                    <button class="dropbtn" type="button">Region</button>
+                    <button class="dropbtn" id="region-btn" type="button">Region</button>
                     <div id="dropdown-region" class="dropdown-content">
                         <input type="text" placeholder="Search..." id="region-menu" class="input-drpdwn">
-                        <a href="#northwest">North</a>
-                        <a href="#west">West</a>
-                        <a href="#colorado">Colorado</a>
-                        <a href="#texas">Texas</a>
-                        <a href="#midatlantic">Mid Atlantic</a>
-                        <a href="#carolinas">Carolinas</a>
-                        <a href="#southeast">South East</a>
+                        
                     </div>
                 </div>
                 <div class="btn-dropdown">
-                    <button class="dropbtn" type="button">State</button>
+                    <button class="dropbtn" id="state-btn" type="button">State</button>
                     <div id="dropdown-state" class="dropdown-content">
                         <input type="text" placeholder="Search..." id="state-menu" class="input-drpdwn">
-                        <a href="#ca">California</a>
-                        <a href="#co">Colorado</a>
-                        <a href="#fl">Florida</a>
-                        <a href="#nc">North Carolina</a>
-                        <a href="#tx">Texas</a>
-                        <a href="#wa">Washington</a>
-                        <a href="#va">Virginia</a>
                     </div>
                 </div>
                 <div class="btn-dropdown">
-                    <button class="dropbtn" type="button">Type</button>
-                    <div id="dropdown-type" class="dropdown-content">
+                    <button class="dropbtn" id="opportunity-btn" type="button">Opportunity</button>
+                    <div id="dropdown-opportunity" class="dropdown-content">
                         <input type="text" placeholder="Search..." id="type-menu" class="input-drpdwn">
-                        <a href="#business">Business</a>
-                        <a href="#home">Home</a>
                     </div>
                 </div>
             </div>
@@ -52,7 +37,7 @@
     </div>
     <div class="container community-container">
         <div class="row">
-            <div class="col-md-3 single-item" data-region="west" data-state="ar" data-type="business">
+            <div class="col-md-3 single-item" data-region="west" data-state="ar" data-opportunity="business">
                 <div class="image-container">
                     <img class="img-fluid" src="./assets/sw-amenity-video-8.png" alt="first image">
                 </div>
@@ -61,7 +46,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
                 </div>
             </div>
-            <div class="col-md-3 single-item" data-region="colorado" data-state="co" data-type="homes">
+            <div class="col-md-3 single-item" data-region="colorado" data-state="co" data-opportunity="homes">
                 <div class="image-container">
                     <img class="img-fluid" src="./assets/sw-amenity.png" alt="second">
                 </div>
@@ -70,7 +55,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
                 </div>
             </div>
-            <div class="col-md-3 single-item" data-region="southeast" data-state="fl" data-type="business">
+            <div class="col-md-3 single-item" data-region="southeast" data-state="fl" data-opportunity="business">
                 <div class="image-container">
                     <img class="img-fluid" src="./assets/sw2.png" alt="fourth">
                 </div>
@@ -79,7 +64,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
                 </div>
             </div>
-            <div class="col-md-3 single-item" data-region="carolinas" data-state="nc" data-type="home">
+            <div class="col-md-3 single-item" data-region="carolinas" data-state="nc" data-opportunity="home">
                 <div class="image-container">
                     <img class="img-fluid" src="./assets/sw10.png" alt="third">
                 </div>
@@ -89,7 +74,7 @@
                 </div>
             </div>
             <!-- second Row -->
-            <div class="col-md-3 single-item" data-region="midatlantic" data-state="va" data-type="home">
+            <div class="col-md-3 single-item" data-region="midatlantic" data-state="va" data-opportunity="home">
                 <div class="image-container">
                     <img class="img-fluid" src="./assets/sw-amenity-video-8.png" alt="first image">
                 </div>
@@ -98,7 +83,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
                 </div>
             </div>
-            <div class="col-md-3 single-item" data-region="texas" data-state="tx" data-type="business">
+            <div class="col-md-3 single-item" data-region="texas" data-state="tx" data-opportunity="business">
                 <div class="image-container">
                     <img class="img-fluid" src="./assets/sw-amenity.png" alt="second">
                 </div>
@@ -107,7 +92,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
                 </div>
             </div>
-            <div class="col-md-3 single-item" data-region="northwest" data-state="ca" data-type="home">
+            <div class="col-md-3 single-item" data-region="northwest" data-state="ca" data-opportunity="home">
                 <div class="image-container">
                     <img class="img-fluid" src="./assets/sw2.png" alt="fourth">
                 </div>
@@ -116,7 +101,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
                 </div>
             </div>
-            <div class="col-md-3 single-item" data-region="northwest" data-state="wa" data-type="home">
+            <div class="col-md-3 single-item" data-region="northwest" data-state="wa" data-opportunity="home">
                 <div class="image-container">
                     <img class="img-fluid" src="./assets/sw10.png" alt="third">
                 </div>
