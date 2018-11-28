@@ -10,104 +10,105 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container buttons-container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <div class="btn-dropdown">
-                    <button class="dropbtn" id="region-btn" type="button">Region</button>
-                    <div id="dropdown-region" class="dropdown-content">
-                        <input type="text" placeholder="Search..." id="region-menu" class="input-drpdwn">
-                        
+    <div class="filter-module-container">
+        <div class="container buttons-container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="btn-dropdown">
+                        <button class="dropbtn" id="region-btn" type="button">Region</button>
+                        <div id="dropdown-region" class="dropdown-content">
+                            <input type="text" placeholder="Search..." id="region-menu" class="input-drpdwn">
+                        </div>
                     </div>
-                </div>
-                <div class="btn-dropdown">
-                    <button class="dropbtn" id="state-btn" type="button">State</button>
-                    <div id="dropdown-state" class="dropdown-content">
-                        <input type="text" placeholder="Search..." id="state-menu" class="input-drpdwn">
+                    <div class="btn-dropdown">
+                        <button class="dropbtn" id="state-btn" type="button">State</button>
+                        <div id="dropdown-state" class="dropdown-content">
+                            <input type="text" placeholder="Search..." id="state-menu" class="input-drpdwn">
+                        </div>
                     </div>
-                </div>
-                <div class="btn-dropdown">
-                    <button class="dropbtn" id="opportunity-btn" type="button">Opportunity</button>
-                    <div id="dropdown-opportunity" class="dropdown-content">
-                        <input type="text" placeholder="Search..." id="type-menu" class="input-drpdwn">
+                    <div class="btn-dropdown">
+                        <button class="dropbtn" id="opportunity-btn" type="button">Opportunity</button>
+                        <div id="dropdown-opportunity" class="dropdown-content">
+                            <input type="text" placeholder="Search..." id="type-menu" class="input-drpdwn">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container community-container">
-        <div class="row">
-            <div class="col-md-3 single-item" data-region="west" data-state="ar" data-opportunity="business">
-                <div class="image-container">
-                    <img class="img-fluid" src="./assets/sw-amenity-video-8.png" alt="first image">
+        <div class="container community-container">
+            <div class="row">
+                <div class="col-md-3 single-item" data-region="west" data-state="ar" data-opportunity="business,home,multifamily">
+                    <div class="image-container">
+                        <img class="img-fluid" src="./assets/sw-amenity-video-8.png" alt="first image">
+                    </div>
+                    <div class="label">ESTRELLA</div>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
+                    </div>
                 </div>
-                <div class="label">ESTRELLA</div>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
+                <div class="col-md-3 single-item" data-region="colorado" data-state="co" data-opportunity="home">
+                    <div class="image-container">
+                        <img class="img-fluid" src="./assets/sw-amenity.png" alt="second">
+                    </div>
+                    <div class="label">ANTHEM</div>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 single-item" data-region="colorado" data-state="co" data-opportunity="homes">
-                <div class="image-container">
-                    <img class="img-fluid" src="./assets/sw-amenity.png" alt="second">
+                <div class="col-md-3 single-item" data-region="southeast" data-state="fl" data-opportunity="business,multifamily">
+                    <div class="image-container">
+                        <img class="img-fluid" src="./assets/sw2.png" alt="fourth">
+                    </div>
+                    <div class="label">BEXLEY</div>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
+                    </div>
                 </div>
-                <div class="label">ANTHEM</div>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
+                <div class="col-md-3 single-item" data-region="carolinas" data-state="nc" data-opportunity="home">
+                    <div class="image-container">
+                        <img class="img-fluid" src="./assets/sw10.png" alt="third">
+                    </div>
+                    <div class="label">BRIAR CHAPEL</div>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 single-item" data-region="southeast" data-state="fl" data-opportunity="business">
-                <div class="image-container">
-                    <img class="img-fluid" src="./assets/sw2.png" alt="fourth">
+                <!-- second Row -->
+                <div class="col-md-3 single-item" data-region="midatlantic" data-state="va" data-opportunity="home,single-family">
+                    <div class="image-container">
+                        <img class="img-fluid" src="./assets/sw-amenity-video-8.png" alt="first image">
+                    </div>
+                    <div class="label">EMBREY MILL</div>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
+                    </div>
                 </div>
-                <div class="label">BEXLEY</div>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
+                <div class="col-md-3 single-item" data-region="texas" data-state="tx" data-opportunity="business">
+                    <div class="image-container">
+                        <img class="img-fluid" src="./assets/sw-amenity.png" alt="second">
+                    </div>
+                    <div class="label">HOLLYHOCK</div>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 single-item" data-region="carolinas" data-state="nc" data-opportunity="home">
-                <div class="image-container">
-                    <img class="img-fluid" src="./assets/sw10.png" alt="third">
+                <div class="col-md-3 single-item" data-region="northwest" data-state="ca" data-opportunity="home,business">
+                    <div class="image-container">
+                        <img class="img-fluid" src="./assets/sw2.png" alt="fourth">
+                    </div>
+                    <div class="label">NEWLAND SIERRA</div>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
+                    </div>
                 </div>
-                <div class="label">BRIAR CHAPEL</div>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
-                </div>
-            </div>
-            <!-- second Row -->
-            <div class="col-md-3 single-item" data-region="midatlantic" data-state="va" data-opportunity="home">
-                <div class="image-container">
-                    <img class="img-fluid" src="./assets/sw-amenity-video-8.png" alt="first image">
-                </div>
-                <div class="label">EMBREY MILL</div>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
-                </div>
-            </div>
-            <div class="col-md-3 single-item" data-region="texas" data-state="tx" data-opportunity="business">
-                <div class="image-container">
-                    <img class="img-fluid" src="./assets/sw-amenity.png" alt="second">
-                </div>
-                <div class="label">HOLLYHOCK</div>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
-                </div>
-            </div>
-            <div class="col-md-3 single-item" data-region="northwest" data-state="ca" data-opportunity="home">
-                <div class="image-container">
-                    <img class="img-fluid" src="./assets/sw2.png" alt="fourth">
-                </div>
-                <div class="label">NEWLAND SIERRA</div>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
-                </div>
-            </div>
-            <div class="col-md-3 single-item" data-region="northwest" data-state="wa" data-opportunity="home">
-                <div class="image-container">
-                    <img class="img-fluid" src="./assets/sw10.png" alt="third">
-                </div>
-                <div class="label">TEHALEH</div>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
+                <div class="col-md-3 single-item" data-region="northwest" data-state="wa" data-opportunity="home">
+                    <div class="image-container">
+                        <img class="img-fluid" src="./assets/sw10.png" alt="third">
+                    </div>
+                    <div class="label">TEHALEH</div>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure eaque rem expedita. Laborum, sit. Minima, maiores dignissimos consequuntur sint nobis maxime quo tempora pariatur culpa accusantium iusto ex labore!</p>
+                    </div>
                 </div>
             </div>
         </div>

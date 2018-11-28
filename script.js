@@ -26,14 +26,17 @@ document.querySelectorAll('.community-container .single-item').forEach(function 
 });
 var newRegion = regionArr.filter( uniqueArrItems );
 var newState = stateArr.filter( uniqueArrItems );
-var newOpportunity = opportunityArr.filter( uniqueArrItems );
+var newOpportunity = opportunityArr
+						.join(',')
+						.split(',')
+						.filter( uniqueArrItems );
 /**
  * filter only words that match on the dropdown input
  * @param {String} evt - current target
  * @return list of filtered elements 
  */
 var inputFilterFunction = function (evt) {
-	var input, filter, ul, li, a, i;
+	var input, filter, ul, li, a, i, div;
 	input = evt.target;
 	filter = input.value.toUpperCase();
 	div = input.parentNode;
@@ -59,7 +62,12 @@ var filterCommunity = function (evt, community) {
         var selectedItem = evt.target.getAttribute( 'href' ).substr(1),
             dataRegion = community.dataset.region,
             dataState = community.dataset.state,
-            dataOpportunity = community.dataset.opportunity;
+			dataOpportunityArr = community.dataset.opportunity.split(',');
+
+		var dataOpportunity = dataOpportunityArr.filter(function (item) {
+			return item === selectedItem;
+		}).join(',');
+			
         
         if ( dataRegion === selectedItem || dataState === selectedItem || dataOpportunity === selectedItem ) {
             community.classList.add( 'show-community' );
@@ -77,10 +85,7 @@ var filterCommunity = function (evt, community) {
 var displayDropdown = function (evt) {
 	var $dropdownDiv = evt.target.closest( '.btn-dropdown' ),
 		$inputSearch = $dropdownDiv.querySelector( 'input' ),
-        $dropContent = $dropdownDiv.querySelector( '.dropdown-content' ),
-        $regionBtn = $dropdownDiv.querySelector( '#region-btn' ),
-        $stateBtn = $dropdownDiv.querySelector( '#state-btn' ),
-        $opportunityBtn = $dropdownDiv.querySelector( '#opportunity-btn' );
+        $dropContent = $dropdownDiv.querySelector( '.dropdown-content' );
 
 	if ( $dropContent.classList.contains( 'show' ) && evt.target !== $inputSearch ) {
         
