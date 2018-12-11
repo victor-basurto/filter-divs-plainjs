@@ -31,7 +31,9 @@ var FilterModuleUtils = (function () {
 				return item === selectedItem;
 			}).join(',');
 
-			if ( dataRegion === selectedItem || dataState === selectedItem || dataOpportunity === selectedItem ) {
+			if ( selectedItem === 'show-all' ) {
+				community.classList.remove('hide-community');
+			} else if ( dataRegion === selectedItem || dataState === selectedItem || dataOpportunity === selectedItem ) {
 				community.classList.add( 'show-community' );
 				community.classList.remove( 'hide-community' );
 			} else {
@@ -75,21 +77,24 @@ var FilterModuleUtils = (function () {
 	 * @param {DOMElement} evt - current element 
 	 */
 	var displayDropdown = function (evt) {
-		var $dropdownDiv = evt.currentTarget,
-		$inputSearch = $dropdownDiv.querySelector( 'input' ),
-		$dropContent = $dropdownDiv.querySelector( '.dropdown-content' );
+		var $dropdownDiv = evt.currentTarget.parentElement,
+		$dropContent = $dropdownDiv.querySelector( '.dropdown-content' ),
+		$allDropContent = document.querySelectorAll( '.filter-module-container .dropdown-content' );
 
-		if ( $dropContent.classList.contains( 'show' ) && evt.target !== $inputSearch ) {
-			var $communityContainer = document.querySelector( '.community-container' );
-			$communityContainer.querySelectorAll( '.single-item' ).forEach(function (community) {
-				// display community based on filter
-				filterCommunity( evt, community );
-			});
+		[].forEach.call($allDropContent, function(item) {
+			item.classList.remove('show');
+		});
+		
+		if ( $dropContent.classList.contains( 'show' ) ) {
 			$dropContent.classList.remove( 'show' );
 		} else {
 			$dropContent.classList.add( 'show' );
 		}
 	}
+
+	// var communityAction = function (evt) {
+		
+	// }
 
 	/**
 	 * Create list of anchors from element passed
@@ -106,6 +111,7 @@ var FilterModuleUtils = (function () {
 		uniqueArrItems: uniqueArrItems,
 		inputFilterFunction: inputFilterFunction,
 		displayDropdown: displayDropdown,
+		filterCommunity: filterCommunity,
 		regionBtn: regionBtn
 	}
 })();

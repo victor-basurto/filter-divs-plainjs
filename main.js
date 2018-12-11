@@ -42,10 +42,23 @@ FilterModuleUtils.regionBtn(dropdownOpportunity, newOpportunity);
 $buttonsContainer.forEach(function (drpdwn) {
 	var $dropdowns = drpdwn.querySelectorAll( '.btn-dropdown' );
 	$dropdowns.forEach(function (btn) {
+		var $dropdownBtn = btn.querySelector('.dropbtn');
 		var $dropDownInput = btn.querySelector( 'input' );
 		// event listeners - [click, keyup]
-		btn.addEventListener('click', FilterModuleUtils.displayDropdown);
+		$dropdownBtn.addEventListener('click', FilterModuleUtils.displayDropdown);
 		$dropDownInput.addEventListener('keyup', FilterModuleUtils.inputFilterFunction, true);
+	});
+});
+$dropdownContent.forEach(function (item) {
+	var $communityContainer = document.querySelector( '.community-container' );
+	item.querySelectorAll('a').forEach(function(el) {
+		el.addEventListener('click', function(evt) {
+			el.parentElement.classList.remove('show');
+			[].forEach.call($communityContainer.querySelectorAll( '.single-item' ), function (community) {
+				// display community based on filter
+				FilterModuleUtils.filterCommunity( evt, community );
+			});
+		});
 	});
 });
 
