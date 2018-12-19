@@ -37,7 +37,7 @@ body { background-color: #eaeaea; }
 }
 .filter-module-container .buttons-container .dropdown-content a:hover { background-color: #ddd; }
 .filter-module-container .buttons-container .input-drpdwn {
-    border-box: box-sizing;
+    box-sizing: border-box;
     /* background-image: url('searchicon.png'); */
     background-position: 14px 12px;
     background-repeat: no-repeat;
@@ -54,9 +54,6 @@ body { background-color: #eaeaea; }
 
 
 .filter-module-container .buttons-container .dropdown-content.show {display: block;}
-/* .no-filter .dropdown .dropdown-content {
-    display: none;
-} */
 
 .filter-module-container .community-container .label {
     font-size: 150%;

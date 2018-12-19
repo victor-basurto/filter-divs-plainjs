@@ -32,7 +32,7 @@ var FilterModuleUtils = (function () {
 			}).join(',');
 
 			if ( selectedItem === 'show-all' ) {
-				community.classList.remove('hide-community');
+				community.classList.remove( 'hide-community' );
 			} else if ( dataRegion === selectedItem || dataState === selectedItem || dataOpportunity === selectedItem ) {
 				community.classList.add( 'show-community' );
 				community.classList.remove( 'hide-community' );
@@ -59,7 +59,7 @@ var FilterModuleUtils = (function () {
 	 * @return list of filtered elements 
 	 */
 	var inputFilterFunction = function (evt) {
-		var input, filter, ul, li, a, i, div;
+		var input, filter, div, a;
 		input = evt.target;
 		filter = input.value.toUpperCase();
 		div = input.parentNode;
@@ -82,7 +82,7 @@ var FilterModuleUtils = (function () {
 		$allDropContent = document.querySelectorAll( '.filter-module-container .dropdown-content' );
 
 		[].forEach.call($allDropContent, function(item) {
-			item.classList.remove('show');
+			item.classList.remove( 'show' );
 		});
 		
 		if ( $dropContent.classList.contains( 'show' ) ) {
@@ -92,10 +92,6 @@ var FilterModuleUtils = (function () {
 		}
 	}
 
-	// var communityAction = function (evt) {
-		
-	// }
-
 	/**
 	 * Create list of anchors from element passed
 	 * @param {DOMElement} mainEl - parent anchor holder
@@ -103,7 +99,7 @@ var FilterModuleUtils = (function () {
 	 * @return List of Anchors
 	 */
 	function regionBtn(mainEl, regionArr) {
-		return regionArr.forEach(createListOfAnchors.bind(mainEl));
+		return regionArr.forEach( createListOfAnchors.bind(mainEl) );
 	}
 
 	// accesors
